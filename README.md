@@ -30,7 +30,7 @@ Note: customize our "outDir", delete "rootDir" because webpack will determine wh
     "compilerOptions": {
       "target": "es5",
       "module": "commonjs",
-      "lib": ["es2017", "es7", "es6", "dom"],
+      "lib": ["ES2017", "ES7", "ES6", "DOM"],
       "strict": true,
       "noImplicitAny": false,
       "removeComments": true,
@@ -39,7 +39,9 @@ Note: customize our "outDir", delete "rootDir" because webpack will determine wh
       "outDir": "./dist",
       "typeRoots": ["node_modules/@types"],
       "esModuleInterop": true,
-      "declaration": true,
+      "sourceMap": false,     // not to generate index.js.map file
+      "declaration": false,   // not to generate index.d.ts file
+      "noEmitOnError": true,  // stop producing bundled file on compilation error
       "jsx": "react"
     },
     "include": ["src/*.ts","src/*.tsx"],
@@ -47,7 +49,8 @@ Note: customize our "outDir", delete "rootDir" because webpack will determine wh
 }
 ```
 
-5. create webpack.config.js as follows
+5. create webpack.config.js as follows  
+Note: `resolve: { extensions: [] }` is for the import syntax without suffix like `import App from './app';`
 
 ```js
 module.exports = {
@@ -68,7 +71,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.ts','.js']
+        extensions: ['.ts','.tsx','.js','.jsx']
     }
 };
 ```
@@ -98,7 +101,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.ts','.js']
+        extensions: ['.ts','.tsx','.js','.jsx']
     },
     plugins: [
         new CleanPlugin.CleanWebpackPlugin()
@@ -107,6 +110,7 @@ module.exports = {
 ```
 
 8. modify the script of package.json
+
 ```js
   "scripts": {
     "build": "webpack --config webpack.prod-config.js",
@@ -115,9 +119,11 @@ module.exports = {
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx"
   },
 ```
+
 9. create and modify eslintrc.js 
  
 10. VSCode setting.json:
+
 ```js
 {
   "editor.formatOnSave": false,
