@@ -1,18 +1,20 @@
 ## Installation
 
-`npm install`
+1. `npm install`
+
+2. Install VSCode extensions: [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 ## Usage
 
-1. `npm run watch`: typescript watch mode
+1. `npm run watch`: start typescript watch mode
 
-2. `npm run start`: start dev-server
+2. `npm run start`: start running dev-server
 
-3. `npm run build`: build file from src folder into dist folder
+3. `npm run build`: build bundled JS file from src folder into dist folder
 
-4. `npm run lint`: use esLint for checking files inside src folder manually
+4. `npm run lint`: use ESLint for manually checking files inside src folder
 
-5. Install VSCode extensions: [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+5. Fix format error automatically on save
 
 ## Details
 
