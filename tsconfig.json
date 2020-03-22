@@ -2,7 +2,7 @@
     "compilerOptions": {
       "target": "es5",
       "module": "commonjs",
-      "lib": ["es2017", "es7", "es6", "dom"],
+      "lib": ["ES2017", "ES7", "ES6", "DOM"],
       "strict": true,
       "noImplicitAny": false,
       "removeComments": true,
@@ -11,7 +11,9 @@
       "outDir": "./dist",
       "typeRoots": ["node_modules/@types"],
       "esModuleInterop": true,
-      "declaration": true,
+      "sourceMap": false,
+      "declaration": false,
+      "noEmitOnError": true,
       "jsx": "react"
     },
     "include": ["src/*.ts","src/*.tsx"],

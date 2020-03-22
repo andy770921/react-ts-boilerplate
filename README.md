@@ -20,7 +20,9 @@
 
 2. `npm install react react-dom --save` and install eslint and relavant eslint-plugins
 
-3. modify tscongfig.json as follows.   
+3. `npm i -D @types/react @types/react-dom`
+
+4. modify tscongfig.json as follows.   
 Note: customize our "outDir", delete "rootDir" because webpack will determine where the root file is and take over there
 
 ```js
@@ -45,7 +47,7 @@ Note: customize our "outDir", delete "rootDir" because webpack will determine wh
 }
 ```
 
-4. create webpack.config.js as follows
+5. create webpack.config.js as follows
 
 ```js
 module.exports = {
@@ -71,9 +73,9 @@ module.exports = {
 };
 ```
 
-5. `npm install --save-dev clean-webpack-plugin`
+6. `npm install --save-dev clean-webpack-plugin`
 
-6. create webpack.prod-config.js as follows
+7. create webpack.prod-config.js as follows
 
 ```js
 const path = require('path');
@@ -104,7 +106,7 @@ module.exports = {
 };
 ```
 
-7. modify the script of package.json
+8. modify the script of package.json
 ```js
   "scripts": {
     "build": "webpack --config webpack.prod-config.js",
@@ -113,9 +115,9 @@ module.exports = {
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx"
   },
 ```
-8. create and modify eslintrc.js 
+9. create and modify eslintrc.js 
  
-9. VSCode setting.json:
+10. VSCode setting.json:
 ```js
 {
   "editor.formatOnSave": false,
