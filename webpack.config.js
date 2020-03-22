@@ -2,10 +2,10 @@ const path = require('path');
 
 module.exports = {
     mode: 'development',
-    entry: './src/app.tsx',
+    entry: './src/index.tsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'app.js',
+        filename: 'index.js',
         publicPath: 'dist'
     },
     module: {
@@ -18,6 +18,6 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.ts','.js']
+        extensions: ['.ts','.tsx','.js','.jsx']
     }
 };

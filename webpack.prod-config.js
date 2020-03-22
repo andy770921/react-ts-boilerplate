@@ -4,10 +4,10 @@ const CleanPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     mode: 'production',
-    entry: './src/app.tsx',
+    entry: './src/index.tsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'app.js',
+        filename: 'index.js',
     },
     module: {
         rules: [
@@ -19,7 +19,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.ts','.js']
+        extensions: ['.ts','.tsx','.js','.jsx']
     },
     plugins: [
         new CleanPlugin.CleanWebpackPlugin()
