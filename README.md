@@ -1,4 +1,9 @@
+## Installation
+
+`npm install`
+
 ## Usage
+
 1. `npm run watch`: typescript watch mode
 
 2. `npm run start`: start dev-server
@@ -10,6 +15,7 @@
 5. install VSCode extensions: ESLint, Prettier
 
 ## Details
+
 1. `npm install --save-dev webpack webpack-cli webpack-dev-server typescript ts-loader`
 
 2. `npm install react react-dom --save` and install eslint and relavant eslint-plugins
