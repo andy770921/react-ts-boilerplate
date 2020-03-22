@@ -12,7 +12,7 @@
 
 4. `npm run lint`: use esLint for checking files inside src folder manually
 
-5. install VSCode extensions: ESLint, Prettier
+5. Install VSCode extensions: [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 ## Details
 
@@ -22,7 +22,7 @@
 
 3. `npm i -D @types/react @types/react-dom`
 
-4. modify tscongfig.json as follows.   
+4. Modify `tscongfig.json` as follows   
 Note: customize our "outDir", delete "rootDir" because webpack will determine where the root file is and take over there
 
 ```js
@@ -49,8 +49,8 @@ Note: customize our "outDir", delete "rootDir" because webpack will determine wh
 }
 ```
 
-5. create webpack.config.js as follows  
-Note: `resolve: { extensions: [] }` is for the import syntax without suffix like `import App from './app';`
+5. Create `webpack.config.js` as follows  
+Note: `resolve: { extensions: [] }` is for the import syntax like `import App from './app';` without `'./app.tsx'` suffix
 
 ```js
 module.exports = {
@@ -78,7 +78,7 @@ module.exports = {
 
 6. `npm install --save-dev clean-webpack-plugin`
 
-7. create webpack.prod-config.js as follows
+7. Create `webpack.prod-config.js` as follows
 
 ```js
 const path = require('path');
@@ -109,7 +109,7 @@ module.exports = {
 };
 ```
 
-8. modify the script of package.json
+8. Modify the script in `package.json`
 
 ```js
   "scripts": {
@@ -120,9 +120,9 @@ module.exports = {
   },
 ```
 
-9. create and modify eslintrc.js 
+9. Create and modify `eslintrc.js`
  
-10. VSCode setting.json:
+10. Add VSCode setting file `setting.json` in `.vscode` folder:
 
 ```js
 {
