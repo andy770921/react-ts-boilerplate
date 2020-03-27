@@ -1,6 +1,6 @@
 {
   "name": "react-ts-tslint",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
   "repository": {
     "type": "git",
@@ -8,7 +8,7 @@
   },
   "license": "ISC",
   "author": "Andy Chou",
-  "main": "./dist/index.js",
+  "main": "./dist/index.html",
   "scripts": {
     "build": "webpack --config webpack.prod-config.js",
     "start": "webpack-dev-server",
@@ -24,7 +24,6 @@
     "@types/react-dom": "^16.9.5",
     "@typescript-eslint/eslint-plugin": "^2.20.0",
     "@typescript-eslint/parser": "^2.20.0",
-    "clean-webpack-plugin": "^3.0.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "18.0.1",
     "eslint-config-prettier": "^6.10.0",
