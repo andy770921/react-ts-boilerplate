@@ -55,13 +55,17 @@ Note: customize our "outDir", delete "rootDir" because webpack will determine wh
 Note: `resolve: { extensions: [] }` is for the import syntax like `import App from './app';` without `'./app.tsx'` suffix
 
 ```js
+const path = require('path'); 
+
 module.exports = {
     mode: 'development',
-    entry: './src/app.tsx',
+    entry: './src/index.tsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'app.js',
-        publicPath: 'dist'
+        filename: 'bundle.js'
+    },
+    devServer: {
+        contentBase: "./dist",
     },
     module: {
         rules: [
@@ -84,14 +88,13 @@ module.exports = {
 
 ```js
 const path = require('path');
-const CleanPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     mode: 'production',
-    entry: './src/app.tsx',
+    entry: './src/index.tsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'app.js',
+        filename: 'bundle.js',
     },
     module: {
         rules: [
@@ -104,10 +107,7 @@ module.exports = {
     },
     resolve: {
         extensions: ['.ts','.tsx','.js','.jsx']
-    },
-    plugins: [
-        new CleanPlugin.CleanWebpackPlugin()
-    ]
+    }
 };
 ```
 
