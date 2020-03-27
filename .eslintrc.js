@@ -74,7 +74,7 @@ module.exports = {
         'react/jsx-uses-vars': 'error',
         'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
         'react/static-property-placement': 'off',
-        'react/jsx-fragments': [2, 'element'],
+        'react/jsx-fragments': [2, 'syntax'],
         'react/prop-types': [2, { skipUndeclared: true }],
         'import/no-extraneous-dependencies': [0],
         'import/named': [0],
