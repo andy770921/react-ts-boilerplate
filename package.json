@@ -11,13 +11,14 @@
   "main": "./dist/index.html",
   "scripts": {
     "build": "webpack --config webpack.prod-config.js",
-    "start": "webpack-dev-server --open",
+    "start": "webpack-dev-server --open --config webpack.dev-config.js",
     "watch": "tsc -w",
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "webpack-merge": "^5.0.9"
   },
   "devDependencies": {
     "@types/react": "^16.9.25",
