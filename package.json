@@ -1,14 +1,22 @@
 {
-  "name": "react-ts-tslint",
+  "name": "react-ts-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "A template for a React + TypeScript + esLint package",
   "repository": {
     "type": "git",
-    "url": "https://github.com/andy770921/react-ts-tslint.git"
+    "url": "https://github.com/andy770921/react-ts-boilerplate.git"
   },
   "license": "ISC",
   "author": "Andy Chou",
   "main": "./dist/index.html",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "react",
+    "typescript",
+    "eslint"
+  ],
   "scripts": {
     "build": "webpack --config webpack.prod-config.js",
     "start": "webpack-dev-server --open --config webpack.dev-config.js",
