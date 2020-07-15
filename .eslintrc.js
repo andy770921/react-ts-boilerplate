@@ -112,5 +112,5 @@ module.exports = {
             "node/no-unpublished-require": "off"
         }
     }],
-    ignorePatterns: ["webpack.config.js", "webpack.prod-config.js", "node_modules/", "dist/"],
+    ignorePatterns: ["node_modules/", "dist/"],
 };
