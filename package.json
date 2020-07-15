@@ -1,5 +1,5 @@
 {
-  "name": "react-ts-boilerplate",
+  "name": "react-ts-npm-boilerplate",
   "version": "1.0.0",
   "description": "A template for a React + TypeScript + esLint package",
   "repository": {
@@ -25,8 +25,7 @@
   },
   "dependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "webpack-merge": "^5.0.9"
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@types/react": "^16.9.25",
@@ -52,6 +51,7 @@
     "typescript": "^3.8.3",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.0.9"
   }
 }
