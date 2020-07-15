@@ -16,13 +16,13 @@
 
 5. Fix format error automatically on save
 
-## Details
+## Project Setting Details:
 
-1. `npm install --save-dev webpack webpack-cli webpack-dev-server typescript ts-loader`
+1. Install dev dependencies: `npm install --save-dev webpack webpack-cli webpack-dev-server typescript ts-loader`
 
-2. `npm install react react-dom --save` and install eslint and relavant eslint-plugins
+2. Install dependencies: `npm install react react-dom --save` and install eslint and relavant eslint-plugins
 
-3. `npm i -D @types/react @types/react-dom`
+3. Install dev dependencies for TS type: `npm i -D @types/react @types/react-dom`
 
 4. Modify `tscongfig.json` as follows   
 Note: customize our "outDir", delete "rootDir" because webpack will determine where the root file is and take over there
@@ -52,7 +52,7 @@ Note: customize our "outDir", delete "rootDir" because webpack will determine wh
 ```
 
 5. Create `webpack.config.js` as follows  
-Note: `resolve: { extensions: [] }` is for the import syntax like `import App from './app';` without `'./app.tsx'` suffix
+Note: `resolve: { extensions: ['.ts','.tsx','.js','.jsx'] }` is for the import syntax like `import App from './app';` without `'./app.tsx'` suffix
 
 ```js
 const path = require('path'); 
@@ -84,39 +84,14 @@ module.exports = {
 
 6. `npm install --save-dev clean-webpack-plugin`
 
-7. Create `webpack.prod-config.js` as follows
-
-```js
-const path = require('path');
-
-module.exports = {
-    mode: 'production',
-    entry: './src/index.tsx',
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
-    },
-    module: {
-        rules: [
-            {
-                test: /\.ts$|\.tsx$/,
-                use: 'ts-loader',
-                exclude: /node_modules/
-            }
-        ]
-    },
-    resolve: {
-        extensions: ['.ts','.tsx','.js','.jsx']
-    }
-};
-```
+7. split `webpack.config.js` into `webpack.common-config.js`, `webpack.dev-config.js`, `webpack.prod-config.js` using `webpack-merge` package
 
 8. Modify the script in `package.json`
 
 ```js
   "scripts": {
     "build": "webpack --config webpack.prod-config.js",
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --open --config webpack.dev-config.js",
     "watch": "tsc -w",
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx"
   },
