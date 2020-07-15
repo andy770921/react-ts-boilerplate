@@ -82,11 +82,9 @@ module.exports = {
 };
 ```
 
-6. `npm install --save-dev clean-webpack-plugin`
+6. split `webpack.config.js` into `webpack.common-config.js`, `webpack.dev-config.js`, `webpack.prod-config.js` using `webpack-merge` package
 
-7. split `webpack.config.js` into `webpack.common-config.js`, `webpack.dev-config.js`, `webpack.prod-config.js` using `webpack-merge` package
-
-8. Modify the script in `package.json`
+7. Modify the script in `package.json`
 
 ```js
   "scripts": {
@@ -97,9 +95,9 @@ module.exports = {
   },
 ```
 
-9. Create and modify `eslintrc.js`
+8. Create and modify `eslintrc.js`
  
-10. Add VSCode setting file `setting.json` in `.vscode` folder:
+9. Add VSCode setting file `setting.json` in `.vscode` folder:
 
 ```js
 {
