@@ -24,7 +24,7 @@
 
 3. Install dev dependencies for TS type: `npm i -D @types/react @types/react-dom`
 
-4. Modify `tscongfig.json` as follows   
+4. Modify `tsconfig.json` as follows   
 Note: customize our "outDir", delete "rootDir" because webpack will determine where the root file is and take over there
 
 ```js
