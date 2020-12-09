@@ -25,13 +25,14 @@
 3. Install dev dependencies for TS type: `npm i -D @types/react @types/react-dom`
 
 4. Modify `tsconfig.json` as follows   
-Note: customize our "outDir", delete "rootDir" because webpack will determine where the root file is and take over there
+- customize the `"outDir"`, delete `"rootDir"` because webpack will determine where the root file is and take over there.
+- set `"jsx"` and `"module"` as [React 17 suggestion](https://zh-hant.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html).
 
 ```js
 {
     "compilerOptions": {
       "target": "es5",
-      "module": "commonjs",
+      "module": "esnext",
       "lib": ["ES2017", "ES7", "ES6", "DOM"],
       "strict": true,
       "noImplicitAny": false,
@@ -44,7 +45,7 @@ Note: customize our "outDir", delete "rootDir" because webpack will determine wh
       "sourceMap": false,     // not to generate index.js.map file
       "declaration": false,   // not to generate index.d.ts file
       "noEmitOnError": true,  // stop producing bundled file on compilation error
-      "jsx": "react"
+      "jsx": "react-jsx"
     },
     "include": ["src/*.ts","src/*.tsx"],
     "exclude": ["node_modules", "dist"]
@@ -88,8 +89,8 @@ module.exports = {
 
 ```js
   "scripts": {
-    "build": "webpack --config webpack.prod-config.js",
-    "start": "webpack-dev-server --open --config webpack.dev-config.js",
+    "start": "webpack serve --config webpack.config.dev.js",
+    "build": "webpack --config webpack.config.prod.js",
     "watch": "tsc -w",
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx"
   },
@@ -98,7 +99,7 @@ module.exports = {
 8. Create and modify `eslintrc.js`
  
 9. Add VSCode setting file `setting.json` in `.vscode` folder:
-
+- [set the TypeScript version of local VSCode workspace](https://stackoverflow.com/questions/39668731/what-typescript-version-is-visual-studio-code-using-how-to-update-it) if needed 
 ```js
 {
   "editor.formatOnSave": false,
