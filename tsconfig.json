@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
       "target": "es5",
-      "module": "commonjs",
+      "module": "esnext",
       "lib": ["ES2017", "ES7", "ES6", "DOM"],
       "strict": true,
       "noImplicitAny": false,
@@ -14,9 +14,9 @@
       "sourceMap": false,
       "declaration": false,
       "noEmitOnError": true,
-      "jsx": "react"
+      "jsx": "react-jsx"
     },
-    "include": ["src/*.ts","src/*.tsx"],
+    "include": ["src/*.ts", "src/*.tsx"],
     "exclude": ["node_modules", "dist"]
 }
   
