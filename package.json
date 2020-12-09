@@ -1,5 +1,5 @@
 {
-  "name": "react-ts-npm-boilerplate",
+  "name": "react-ts-boilerplate",
   "version": "1.0.0",
   "description": "A template for a React + TypeScript + esLint package",
   "repository": {
@@ -18,8 +18,8 @@
     "eslint"
   ],
   "scripts": {
-    "start": "webpack serve --config webpack.dev-config.js",
-    "build": "webpack --config webpack.prod-config.js",
+    "start": "webpack serve --config webpack.config.dev.js",
+    "build": "webpack --config webpack.config.prod.js",
     "watch": "tsc -w",
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx"
   },
