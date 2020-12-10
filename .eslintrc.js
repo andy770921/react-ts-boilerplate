@@ -108,10 +108,12 @@ module.exports = {
         },
     },
     overrides: [{
-        files: ["test/**/*.js"],
-        rules: {
-            "node/no-unpublished-require": "off"
-        }
+        files: ['test/**/*.js'],
+        rules: {'node/no-unpublished-require': 'off'}
+    },
+    {
+        files: ['webpack.config.**.js'],
+        rules: {'@typescript-eslint/no-var-requires': 'off'},
     }],
-    ignorePatterns: ["node_modules/", "dist/"],
+    ignorePatterns: ['node_modules/', 'dist/'],
 };
