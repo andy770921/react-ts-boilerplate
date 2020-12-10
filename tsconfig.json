@@ -14,9 +14,11 @@
       "sourceMap": false,
       "declaration": false,
       "noEmitOnError": true,
-      "jsx": "react-jsx"
+      "jsx": "react-jsx",
+      "paths": {
+        "@pages/*": ["./src/pages/*"],
+      }
     },
     "include": ["src/*.ts", "src/*.tsx"],
     "exclude": ["node_modules", "dist"]
 }
-  

@@ -1,4 +1,7 @@
-import ReactDOM from 'react-dom';
-import App from './App';
+import { FC } from 'react';
+import { render } from 'react-dom';
+import Home from '@pages/Home';
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+const App: FC = () => <Home />;
+
+render(<App />, document.querySelector('#root'));
