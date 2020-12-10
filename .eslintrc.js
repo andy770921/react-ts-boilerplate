@@ -112,7 +112,7 @@ module.exports = {
         rules: {'node/no-unpublished-require': 'off'}
     },
     {
-        files: ['webpack.config.**.js'],
+        files: ['webpack.config.*.js'],
         rules: {'@typescript-eslint/no-var-requires': 'off'},
     }],
     ignorePatterns: ['node_modules/', 'dist/'],
