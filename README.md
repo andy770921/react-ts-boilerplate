@@ -18,11 +18,11 @@
 
 ## Project Setting Details:
 
-1. Install dev dependencies: `npm install --save-dev webpack webpack-cli webpack-dev-server typescript ts-loader`
+1. Install dev dependencies: `$ npm install --save-dev webpack webpack-cli webpack-dev-server typescript ts-loader`
 
-2. Install dependencies: `npm install react react-dom --save` and install eslint and relavant eslint-plugins
+2. Install dependencies: `$ npm install react react-dom --save` and install eslint and relavant eslint-plugins
 
-3. Install dev dependencies for TS type: `npm i -D @types/react @types/react-dom`
+3. Install dev dependencies for TS type: `$ npm i -D @types/react @types/react-dom`
 
 4. Modify `tsconfig.json` as follows   
 - customize the `"outDir"`, delete `"rootDir"` because webpack will determine where the root file is and take over there.
@@ -83,9 +83,13 @@ module.exports = {
 };
 ```
 
-6. split `webpack.config.js` into `webpack.common-config.js`, `webpack.dev-config.js`, `webpack.prod-config.js` using `webpack-merge` package
+6. Split `webpack.config.js` into `webpack.common-config.js`, `webpack.dev-config.js`, `webpack.prod-config.js` using `webpack-merge` package
 
-7. Modify the script in `package.json`
+7. Add path alias: `$ npm i -D tsconfig-paths-webpack-plugin` and add settings in `tsconfig.json` and `webpack.common-config.js`
+
+8. Remove `bundle.js.LICENSE` after `$ npm run build`: `$ npm i -D terser-webpack-plugin` and add settings in `webpack.common-prod.js`
+
+9. Modify the script in `package.json`
 
 ```js
   "scripts": {
@@ -96,9 +100,9 @@ module.exports = {
   },
 ```
 
-8. Create and modify `eslintrc.js`
+10. Create and modify `eslintrc.js`
  
-9. Add VSCode setting file `setting.json` in `.vscode` folder:
+11. Add VSCode setting file `setting.json` in `.vscode` folder:
 - [set the TypeScript version of local VSCode workspace](https://stackoverflow.com/questions/39668731/what-typescript-version-is-visual-studio-code-using-how-to-update-it) if needed 
 ```js
 {
