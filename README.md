@@ -85,9 +85,13 @@ module.exports = {
 
 6. Split `webpack.config.js` into `webpack.common-config.js`, `webpack.dev-config.js`, `webpack.prod-config.js` using `webpack-merge` package
 
-7. Add path alias: `$ npm i -D tsconfig-paths-webpack-plugin` and add settings in `tsconfig.json` and `webpack.common-config.js`
+7. Install package for supporting path alias:
 
-8. Remove `bundle.js.LICENSE` after `$ npm run build`: `$ npm i -D terser-webpack-plugin` and add settings in `webpack.common-prod.js`
+`$ npm i -D tsconfig-paths-webpack-plugin` and add settings in `tsconfig.json` and `webpack.common-config.js`
+
+8. Install package for removing `bundle.js.LICENSE.txt` after `$ npm run build`:
+
+`$ npm i -D terser-webpack-plugin` and add settings in `webpack.common-prod.js`
 
 9. Modify the script in `package.json`
 
