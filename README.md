@@ -20,17 +20,17 @@
 
 1. Install dev dependencies
 
-  `$ npm install --save-dev webpack webpack-cli webpack-dev-server typescript ts-loader`
+    `$ npm install --save-dev webpack webpack-cli webpack-dev-server typescript ts-loader`
 
 2. Install dependencies
 
-  `$ npm install react react-dom --save` 
+    `$ npm install react react-dom --save` 
 
 3. Install eslint and relavant eslint-plugins
 
 4. Install dev dependencies for TS type
 
-  `$ npm i -D @types/react @types/react-dom`
+    `$ npm i -D @types/react @types/react-dom`
 
 5. Modify `tsconfig.json` as follows
 
@@ -64,7 +64,7 @@
 
 6. Create `webpack.config.js` as follows
 
-  `resolve: { extensions: ['.ts','.tsx','.js','.jsx'] }` is for the import syntax like `import App from './app';` without `'./app.tsx'` suffix
+    `resolve: { extensions: ['.ts','.tsx','.js','.jsx'] }` is for the import syntax like `import App from './app';` without `'./app.tsx'` suffix
 
 ```js
 const path = require('path'); 
@@ -98,11 +98,11 @@ module.exports = {
 
 8. Install package for supporting path alias
 
-  `$ npm i -D tsconfig-paths-webpack-plugin` and add settings in `tsconfig.json` and `webpack.common-config.js`
+    `$ npm i -D tsconfig-paths-webpack-plugin` and add settings in `tsconfig.json` and `webpack.common-config.js`
 
 9. Install package for removing `bundle.js.LICENSE.txt` after `$ npm run build`
 
-  `$ npm i -D terser-webpack-plugin` and add settings in `webpack.common-prod.js`
+    `$ npm i -D terser-webpack-plugin` and add settings in `webpack.common-prod.js`
 
 10. Modify the script in `package.json`
 
@@ -118,7 +118,7 @@ module.exports = {
 11. Create and modify `eslintrc.js`
  
 12. Add VSCode setting file `setting.json` in `.vscode` folder:
-  [Set the TypeScript version of local VSCode workspace](https://stackoverflow.com/questions/39668731/what-typescript-version-is-visual-studio-code-using-how-to-update-it) if needed 
+    [Set the TypeScript version of local VSCode workspace](https://stackoverflow.com/questions/39668731/what-typescript-version-is-visual-studio-code-using-how-to-update-it) if needed 
 ```js
 {
   "editor.formatOnSave": false,
