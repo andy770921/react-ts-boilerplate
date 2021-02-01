@@ -98,13 +98,17 @@ module.exports = {
 
 8. Install package for supporting path alias
 
-    `$ npm i -D tsconfig-paths-webpack-plugin` and add settings in `tsconfig.json` and `webpack.common-config.js`
+    `$ npm i -D tsconfig-paths-webpack-plugin`
 
-9. Install package for removing `bundle.js.LICENSE.txt` after `$ npm run build`
+9. Install packages for removing existing files under `dist` and generate `index.html` with hashed `app.[contentHash].js` after `$ npm run build`
 
-    `$ npm i -D terser-webpack-plugin` and add settings in `webpack.common-prod.js`
+    `$ npm i -D html-webpack-plugin clean-webpack-plugin`
 
-10. Modify the script in `package.json`
+10. Install package for removing `bundle.js.LICENSE.txt` after `$ npm run build`
+
+    `$ npm i -D terser-webpack-plugin`
+
+11. Modify the script in `package.json`
 
 ```js
   "scripts": {
@@ -115,9 +119,9 @@ module.exports = {
   },
 ```
 
-11. Create and modify `eslintrc.js`
+12. Create and modify `eslintrc.js`
  
-12. Add VSCode setting file `setting.json` in `.vscode` folder:
+13. Add VSCode setting file `setting.json` in `.vscode` folder:
     [Set the TypeScript version of local VSCode workspace](https://stackoverflow.com/questions/39668731/what-typescript-version-is-visual-studio-code-using-how-to-update-it) if needed 
 ```js
 {

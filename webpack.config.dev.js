@@ -3,6 +3,7 @@ const commonConfig = require('./webpack.config.common.js');
 
 module.exports = merge(commonConfig, {
     mode: 'development',
+    entry: './src/index.tsx',
     devServer: {
         contentBase: './dist',
         open: true,
