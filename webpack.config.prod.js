@@ -9,6 +9,7 @@ module.exports = merge(commonConfig, {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[contenthash].js',
+        hashDigestLength: 8,
     },
     optimization: {
         minimize: true,
@@ -17,5 +18,14 @@ module.exports = merge(commonConfig, {
                 extractComments: false,
             }),
         ],
+        splitChunks: {
+            cacheGroups: {
+                vendor: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: 'vendors',
+                    chunks: 'all',
+                },
+            },
+        },
     },
 });
