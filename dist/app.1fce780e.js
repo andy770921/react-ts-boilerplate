@@ -1,0 +1,1 @@
+(self.webpackChunkreact_ts_boilerplate=self.webpackChunkreact_ts_boilerplate||[]).push([[143],{262:(e,r,t)=>{"use strict";var o=t(893),c=t(935);const n=function(){return(0,o.jsx)("div",{children:"hello react"},void 0)};(0,c.render)((0,o.jsx)((function(){return(0,o.jsx)(n,{},void 0)}),{},void 0),document.querySelector("#root"))}},0,[[262,666,216]]]);

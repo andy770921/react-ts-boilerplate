@@ -18,6 +18,7 @@ module.exports = merge(commonConfig, {
                 extractComments: false,
             }),
         ],
+        runtimeChunk: 'single',
         splitChunks: {
             cacheGroups: {
                 vendor: {
