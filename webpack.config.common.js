@@ -24,9 +24,10 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            template: './src/template.html',
+            template: './public/index.html',
             title: 'React',
             inject: 'body',
+            favicon: './public/favicon.ico',
         }),
     ],
 };
