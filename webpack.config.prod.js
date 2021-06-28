@@ -10,6 +10,7 @@ module.exports = merge(commonConfig, {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[contenthash].js',
         hashDigestLength: 8,
+        clean: true,
     },
     optimization: {
         minimize: true,
