@@ -96,6 +96,7 @@ module.exports = {
         ],
         'no-shadow': 'off',
         '@typescript-eslint/no-shadow': ['error'],
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
     },
     settings: {
         'import/parsers': {
