@@ -94,6 +94,8 @@ module.exports = {
                 trailingComma: 'es5',
             },
         ],
+        'no-shadow': 'off',
+        '@typescript-eslint/no-shadow': ['error'],
     },
     settings: {
         'import/parsers': {
